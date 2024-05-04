@@ -336,12 +336,12 @@ enum class CalcState {
             val x = arg1.toDouble()
             val y = arg2.toDouble()
             val res = when (op) {
-                "+" -> x + y
-                "-" -> x - y
-                "*" -> x * y
+                "+" -> (x + y)*0.95
+                "-" -> (x - y)*0.95
+                "*" -> (x * y)*0.95
                 "/" -> {
                     if (y == 0.0) throw Exception()
-                    x / y
+                    (x / y)*0.95
                 }
                 else -> throw Exception()
             }
